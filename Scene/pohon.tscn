@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cap4iqb0x8is5"]
+
+[ext_resource type="Texture2D" uid="uid://bjl1qhpoa50nq" path="res://Image/Pohon.png" id="1_ww37k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ww37k"]
+
+[node name="Pohon" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 32)
+texture = ExtResource("1_ww37k")
+offset = Vector2(0, -35.11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(3, 19)
+shape = SubResource("CapsuleShape2D_ww37k")

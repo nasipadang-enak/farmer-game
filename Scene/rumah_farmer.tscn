@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmmyjpa0205hp"]
+
+[ext_resource type="Texture2D" uid="uid://dj5trcj7i6vjd" path="res://Image/rumahFarmer.png" id="1_05a2v"]
+
+[node name="RumahFarmer" type="StaticBody2D"]
+position = Vector2(616, 258)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 67)
+texture = ExtResource("1_05a2v")
+offset = Vector2(0, -66.76)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.5, 36.5)
+polygon = PackedVector2Array(-50.5, 27.5, 51.5, 28.5, 51.5, -11.5, 64.5, -2.5, 64.5, -47.5, -62.5, -46.5, -62.5, -2.5, -50.5, -11.5)

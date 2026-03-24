@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqmxi0p8o4kox"]
+
+[ext_resource type="Texture2D" uid="uid://cxre2glmsj8b1" path="res://Image/pohon beringin.png" id="1_71jq2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ww37k"]
+radius = 9.0
+height = 24.0
+
+[node name="PohonBeringin" type="StaticBody2D"]
+position = Vector2(777, 279)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 48)
+texture = ExtResource("1_71jq2")
+offset = Vector2(0, -53.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(-1, 19)
+shape = SubResource("CapsuleShape2D_ww37k")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctdn2fspsdcbi"]
+
+[ext_resource type="Texture2D" uid="uid://bx13nr6dfrl6d" path="res://Image/pohon apel.png" id="1_2fcmh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ww37k"]
+
+[node name="PohonApel" type="StaticBody2D"]
+position = Vector2(777, 279)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 32)
+texture = ExtResource("1_2fcmh")
+offset = Vector2(0, -35.11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(3, 19)
+shape = SubResource("CapsuleShape2D_ww37k")
