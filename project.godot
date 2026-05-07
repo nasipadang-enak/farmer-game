@@ -12,7 +12,6 @@ config_version=5
 
 config/name="FARMER-GAME with LLM"
 run/main_scene="uid://dwaw0odpufy5"
-run/disable_stdout=true
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -36,6 +35,12 @@ layout/style_directory={
 layout/style_list=["res://style_dialog/text_buble_dialog_style.tres"]
 layout/default_style="res://style_dialog/text_buble_dialog_style.tres"
 variables={}
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+window/disable_stdout=false
 
 [editor_plugins]
 

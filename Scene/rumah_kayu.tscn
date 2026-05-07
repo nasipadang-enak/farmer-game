@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqebg0ivue3el"]
+
+[ext_resource type="Texture2D" uid="uid://cyvnl85qpywe6" path="res://Image/Houses Sprite Sheet.png" id="1_g6g58"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxcww"]
+size = Vector2(50, 35)
+
+[node name="Rumah_Kayu" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 26)
+texture = ExtResource("1_g6g58")
+offset = Vector2(0, -25.38)
+hframes = 15
+vframes = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 10.5)
+shape = SubResource("RectangleShape2D_wxcww")
