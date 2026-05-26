@@ -29,7 +29,7 @@ func update_animation():
 		return
 	animation_tree["parameters/idle/blend_position"] = arah_jalan
 	animation_tree["parameters/jalan/blend_position"] = arah_jalan
-	
+	"resource_path"
 func pilih_animasi():
 	if velocity == Vector2.ZERO:
 		animation_tree["parameters/conditions/lagiIdle"] = true

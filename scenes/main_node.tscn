@@ -1,371 +1,21 @@
-[gd_scene load_steps=50 format=3 uid="uid://dwaw0odpufy5"]
+[gd_scene load_steps=23 format=3 uid="uid://dwaw0odpufy5"]
 
-[ext_resource type="Script" uid="uid://cjgn5rdh2hymb" path="res://Scene/main_node.gd" id="1_uppda"]
-[ext_resource type="Script" uid="uid://cmjj0uwdwflij" path="res://Script/character_body_2d.gd" id="2_e1vr8"]
-[ext_resource type="Texture2D" uid="uid://bha6qid8vdpcx" path="res://Image/Idle_cowok.png" id="3_w8hb3"]
-[ext_resource type="Texture2D" uid="uid://cq2ubxu1o1q4d" path="res://Image/walk_Cowok.png" id="4_p1usx"]
+[ext_resource type="Script" uid="uid://cjgn5rdh2hymb" path="res://scenes/main_node.gd" id="1_uppda"]
 [ext_resource type="Texture2D" uid="uid://ctssemjeanabn" path="res://Image/Bridges.png" id="5_wq1c0"]
 [ext_resource type="Texture2D" uid="uid://c7cnhv8gxjo2s" path="res://Image/Supplies.png" id="6_rrku1"]
 [ext_resource type="Texture2D" uid="uid://dp2vxyjx12rko" path="res://Image/exterior.png" id="7_w73qf"]
+[ext_resource type="PackedScene" uid="uid://bdj3ap3swdjmt" path="res://scenes/player.tscn" id="7_y7imk"]
 [ext_resource type="Texture2D" uid="uid://dq7hhrsv7hp3t" path="res://Image/ground_details.png" id="8_78ho8"]
 [ext_resource type="Texture2D" uid="uid://dlcsev7yvhvkj" path="res://Image/grass_details.png" id="9_fd5cb"]
-[ext_resource type="PackedScene" uid="uid://b315exg1mkh4d" path="res://Scene/Rumah.tscn" id="10_gijee"]
-[ext_resource type="PackedScene" uid="uid://c6mkq2jb1r83b" path="res://Scene/rumah_segitiga.tscn" id="11_3p453"]
-[ext_resource type="PackedScene" uid="uid://cqebg0ivue3el" path="res://Scene/rumah_kayu.tscn" id="12_8wxr4"]
-[ext_resource type="PackedScene" uid="uid://cap4iqb0x8is5" path="res://Scene/pohon.tscn" id="13_2kys2"]
-[ext_resource type="PackedScene" uid="uid://dmmyjpa0205hp" path="res://Scene/rumah_farmer.tscn" id="14_e4tsy"]
-[ext_resource type="PackedScene" uid="uid://ctdn2fspsdcbi" path="res://Scene/pohon_apel.tscn" id="15_llit4"]
-[ext_resource type="PackedScene" uid="uid://bqmxi0p8o4kox" path="res://Scene/pohon_beringin.tscn" id="16_bc62w"]
-[ext_resource type="PackedScene" uid="uid://dhkkqlhihim76" path="res://Scene/npc.tscn" id="17_7hqln"]
+[ext_resource type="PackedScene" uid="uid://b315exg1mkh4d" path="res://scenes/Rumah.tscn" id="10_gijee"]
+[ext_resource type="PackedScene" uid="uid://c6mkq2jb1r83b" path="res://scenes/rumah_segitiga.tscn" id="11_3p453"]
+[ext_resource type="PackedScene" uid="uid://cqebg0ivue3el" path="res://scenes/rumah_kayu.tscn" id="12_8wxr4"]
+[ext_resource type="PackedScene" uid="uid://cap4iqb0x8is5" path="res://scenes/pohon.tscn" id="13_2kys2"]
+[ext_resource type="PackedScene" uid="uid://dmmyjpa0205hp" path="res://scenes/rumah_farmer.tscn" id="14_e4tsy"]
+[ext_resource type="PackedScene" uid="uid://ctdn2fspsdcbi" path="res://scenes/pohon_apel.tscn" id="15_llit4"]
+[ext_resource type="PackedScene" uid="uid://bqmxi0p8o4kox" path="res://scenes/pohon_beringin.tscn" id="16_bc62w"]
+[ext_resource type="PackedScene" uid="uid://dhkkqlhihim76" path="res://scenes/npc.tscn" id="17_7hqln"]
 [ext_resource type="PackedScene" uid="uid://b6rtvtidf7tro" path="res://main_menu.tscn" id="18_e1vr8"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0hol4"]
-radius = 5.0
-height = 14.0
-
-[sub_resource type="Animation" id="Animation_0hol4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_w8hb3")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_q6r6c"]
-resource_name = "idle_atas"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_w8hb3")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [24, 25, 26, 27, 28, 29, 30, 31]
-}
-
-[sub_resource type="Animation" id="Animation_epypp"]
-resource_name = "idle_bawah"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_w8hb3")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_d21ai"]
-resource_name = "idle_kanan"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_w8hb3")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [40, 41, 42, 43, 44, 45, 46, 47]
-}
-
-[sub_resource type="Animation" id="Animation_kdubu"]
-resource_name = "idle_kiri"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_w8hb3")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [8, 9, 10, 11, 12, 13, 14, 15]
-}
-
-[sub_resource type="Animation" id="Animation_rj586"]
-resource_name = "jalan_atas"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_p1usx")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [24, 25, 26, 27, 28, 29, 30, 31]
-}
-
-[sub_resource type="Animation" id="Animation_ir8iy"]
-resource_name = "jalan_bawah"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_p1usx")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_hqns4"]
-resource_name = "jalan_kanan"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_p1usx")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [40, 41, 42, 43, 44, 45, 46, 47]
-}
-
-[sub_resource type="Animation" id="Animation_4d7sh"]
-resource_name = "jalan_kiri"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_p1usx")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [8, 9, 10, 11, 12, 13, 14, 15]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6r6c"]
-_data = {
-&"RESET": SubResource("Animation_0hol4"),
-&"idle_atas": SubResource("Animation_q6r6c"),
-&"idle_bawah": SubResource("Animation_epypp"),
-&"idle_kanan": SubResource("Animation_d21ai"),
-&"idle_kiri": SubResource("Animation_kdubu"),
-&"jalan_atas": SubResource("Animation_rj586"),
-&"jalan_bawah": SubResource("Animation_ir8iy"),
-&"jalan_kanan": SubResource("Animation_hqns4"),
-&"jalan_kiri": SubResource("Animation_4d7sh")
-}
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0hol4"]
-animation = &"idle_bawah"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q6r6c"]
-animation = &"idle_kiri"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kdubu"]
-animation = &"idle_kanan"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d21ai"]
-animation = &"idle_atas"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_rj586"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_0hol4")
-blend_point_0/pos = Vector2(0, 1.1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_q6r6c")
-blend_point_1/pos = Vector2(-1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_kdubu")
-blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_d21ai")
-blend_point_3/pos = Vector2(0, -1)
-blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4d7sh"]
-animation = &"jalan_bawah"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ir8iy"]
-animation = &"jalan_kiri"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hqns4"]
-animation = &"jalan_kanan"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x0ka3"]
-animation = &"jalan_atas"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_0h7mo"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_4d7sh")
-blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_ir8iy")
-blend_point_1/pos = Vector2(-1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_hqns4")
-blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_x0ka3")
-blend_point_3/pos = Vector2(0, -1)
-blend_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nr8wp"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d2bti"]
-advance_mode = 2
-advance_condition = &"lagiJalan"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ta5nu"]
-advance_mode = 2
-advance_condition = &"lagiIdle"
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_flf07"]
-states/idle/node = SubResource("AnimationNodeBlendSpace2D_rj586")
-states/idle/position = Vector2(415, 57.5)
-states/jalan/node = SubResource("AnimationNodeBlendSpace2D_0h7mo")
-states/jalan/position = Vector2(594, 75)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nr8wp"), "idle", "jalan", SubResource("AnimationNodeStateMachineTransition_d2bti"), "jalan", "idle", SubResource("AnimationNodeStateMachineTransition_ta5nu")]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd0ta"]
 texture = ExtResource("5_wq1c0")
@@ -2733,40 +2383,6 @@ sources/0 = SubResource("TileSetAtlasSource_rd0ta")
 y_sort_enabled = true
 script = ExtResource("1_uppda")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(591, 350)
-script = ExtResource("2_e1vr8")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3.5, 3.5)
-
-[node name="player" type="Sprite2D" parent="Player"]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(0, 10)
-texture = ExtResource("3_w8hb3")
-offset = Vector2(0, -10)
-hframes = 8
-vframes = 6
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(1, 4)
-shape = SubResource("CapsuleShape2D_0hol4")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-libraries = {
-&"": SubResource("AnimationLibrary_q6r6c")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="Player"]
-tree_root = SubResource("AnimationNodeStateMachine_flf07")
-advance_expression_base_node = NodePath("..")
-anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/lagiIdle = false
-parameters/conditions/lagiJalan = false
-parameters/idle/blend_position = Vector2(0.0039100647, 0.21428573)
-parameters/jalan/blend_position = Vector2(0, 0)
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_q6r6c")
 format = 2
@@ -2789,6 +2405,9 @@ layer_8/name = "Objek (buah, kotak,dll)"
 layer_8/tile_data = PackedInt32Array(786465, 458754, 37, 852001, 458754, 38, 786466, 524290, 37, 852002, 524290, 38, 917537, 458754, 37, 983073, 458754, 38, 917538, 524290, 37, 983074, 524290, 38, 983069, 65538, 38, 917534, 131074, 37, 983070, 131074, 38, 1048606, 131074, 39, 1114142, 131074, 40, 917535, 196610, 37, 983071, 196610, 38, 1048607, 196610, 39, 1114143, 196610, 40, 983072, 262146, 38, 1048633, 65538, 48, 1114169, 65538, 49, 1179705, 65538, 50, 1245241, 65538, 51, 1048634, 131074, 48, 1114170, 131074, 49, 1179706, 131074, 50, 1245242, 131074, 51, 1048635, 196610, 48, 1114171, 196610, 49, 1179707, 196610, 50, 1245243, 196610, 51, 1048636, 262146, 48, 1114172, 262146, 49, 1179708, 262146, 50, 1245244, 262146, 51, 327733, 327682, 48, 393269, 327682, 49, 458805, 327682, 50, 327734, 393218, 48, 393270, 393218, 49, 458806, 393218, 50, 327735, 458754, 48, 393271, 458754, 49, 458807, 458754, 50, 458811, 524290, 48, 524347, 524290, 49, 589883, 524290, 50, 458812, 589826, 48, 524348, 589826, 49, 589884, 589826, 50, 458813, 655362, 48, 524349, 655362, 49, 589885, 655362, 50)
 layer_9/name = "jembatan"
 layer_9/tile_data = PackedInt32Array(1310782, 327680, 20, 1376318, 327680, 21, 1441854, 327680, 22, 1310783, 393216, 20, 1376319, 393216, 21, 1441855, 393216, 22, 1507391, 393216, 23, 1572927, 393216, 24, 1310784, 458752, 20, 1376320, 458752, 21, 1441856, 458752, 22, 1310785, 524288, 20, 1376321, 524288, 21, 1441857, 524288, 22, 1507393, 524288, 23, 1572929, 524288, 24, 1310786, 589824, 20, 1376322, 589824, 21, 1441858, 589824, 22, 1310787, 655360, 20, 1376323, 655360, 21, 1441859, 655360, 22, 1507395, 655360, 23, 1572931, 655360, 24, 1310788, 720896, 20, 1376324, 720896, 21, 1441860, 720896, 22)
+
+[node name="Player" parent="." instance=ExtResource("7_y7imk")]
+position = Vector2(603, 326)
 
 [node name="NodeRumah" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -2831,3 +2450,4 @@ position = Vector2(730, 331)
 [node name="itemCabai" type="Node2D" parent="."]
 
 [node name="MainMenu" parent="." instance=ExtResource("18_e1vr8")]
+visible = false
