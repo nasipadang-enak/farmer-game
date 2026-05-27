@@ -1,6 +1,6 @@
 # Farmer Game with LLM
 
-Game RPG farming top-down 2D yang dibuat dengan Godot Engine 4.5, dilengkapi dengan NPC berbasis AI menggunakan Google Gemini API.
+Game RPG farming top-down 2D yang dibuat dengan Godot Engine 4.5, dilengkapi dengan NPC berbasis AI menggunakan Groq dengan model llama-3.1-8b-instant.
 
 ## Fitur
 - Karakter player dengan animasi gerak 4 arah
