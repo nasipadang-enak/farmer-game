@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://bdj3ap3swdjmt"]
+[gd_scene load_steps=31 format=3 uid="uid://bdj3ap3swdjmt"]
 
 [ext_resource type="Script" uid="uid://cmjj0uwdwflij" path="res://Script/character_body_2d.gd" id="1_xa75v"]
-[ext_resource type="Texture2D" uid="uid://bha6qid8vdpcx" path="res://Idle_cowok.png" id="2_58ae2"]
-[ext_resource type="Texture2D" uid="uid://cq2ubxu1o1q4d" path="res://walk_Cowok.png" id="3_ivevv"]
+[ext_resource type="Texture2D" uid="uid://bha6qid8vdpcx" path="res://Image/Idle_cowok.png" id="2_58ae2"]
+[ext_resource type="Texture2D" uid="uid://cq2ubxu1o1q4d" path="res://Image/walk_Cowok.png" id="3_ivevv"]
+[ext_resource type="FontFile" uid="uid://cqccqn200kbxy" path="res://Fonts/boldpixels.ttf" id="4_dqkch"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0hol4"]
 radius = 5.0
@@ -352,6 +353,8 @@ states/jalan/node = SubResource("AnimationNodeBlendSpace2D_0h7mo")
 states/jalan/position = Vector2(594, 75)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nr8wp"), "idle", "jalan", SubResource("AnimationNodeStateMachineTransition_d2bti"), "jalan", "idle", SubResource("AnimationNodeStateMachineTransition_ta5nu")]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqkch"]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xa75v")
 
@@ -366,7 +369,6 @@ texture = ExtResource("2_58ae2")
 offset = Vector2(0, -10)
 hframes = 8
 vframes = 6
-frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 4)
@@ -385,3 +387,32 @@ parameters/conditions/lagiIdle = false
 parameters/conditions/lagiJalan = false
 parameters/idle/blend_position = Vector2(0.0039100647, 0.21428573)
 parameters/jalan/blend_position = Vector2(0, 0)
+
+[node name="InputOverlay" type="Node2D" parent="."]
+z_index = 3
+
+[node name="Panel" type="Panel" parent="InputOverlay"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqkch")
+
+[node name="ai_input" type="LineEdit" parent="InputOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.141
+offset_top = 13.88
+offset_right = 82.14025
+offset_bottom = 44.880005
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_dqkch")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "masukkan pertanyaan :"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://crxgrch2lkntx"]
+
+[ext_resource type="Script" uid="uid://bocj5f2xnwxup" path="res://script/input_overlay.gd" id="1_m2k0x"]
+
+[node name="InputOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = -112.0
+offset_right = -7.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0013512457
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_m2k0x")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -109.5
+offset_right = 248.5
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="ai_input" type="LineEdit" parent="Panel"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 0
+offset_left = 100.09595
+offset_top = 71.03162
+offset_right = 400.09595
+offset_bottom = 135.0042
+alignment = 1
+expand_to_text_length = true
