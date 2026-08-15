@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed_jalan = 150.0
 
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var input_overlay = $InputOverlay
 
 
 var arah_jalan
@@ -12,6 +13,8 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	input_overlay.position = Vector2(0, 24)
 func _physics_process(delta: float) -> void:
 	pass
 	arah_jalan = Input.get_vector("jalan_kiri", "jalan_kanan", "jalan_atas", "jalan_bawah")

@@ -20,6 +20,7 @@ scene = ExtResource("4_mrrsl")
 overrides = {
 "choices_text_size": "25.0",
 "name_label_box_modulate": "Color(0.19921875, 0.19921875, 0.19921875, 1)",
+"normal_font": "\"res://Fonts/boldpixels.ttf\"",
 "text_size": "25.0"
 }
 
